@@ -55,26 +55,30 @@ function bonusCalc (employeeArray) {
     if (employee.reviewRating < 2) {
       bonus += 0;
     }
-    else if (employee.reviewRating === 3) {
+    else if ((Number(employee.annualSalary) > 65000) {
+      bonus += 1;
+    })
+    else if (employee.employeeNumber.length === 4 && employee.reviewRating === 3) {
       bonus += 4;
     }
-    else if (employee.reviewRating === 4) {
+    else if (employee.employeeNumber.length === 4 && employee.reviewRating === 4) {
       bonus += 6;
     }
-    else if (employee.reviewRating === 5) {
+    else if (employee.employeeNumber.length === 4 && employee.reviewRating === 5) {
       bonus += 10;
     }
-    else if (employee.reviewRating < 2 && employee.employeeNumber.length === 4 ) {
+    else if (employee.employeeNumber.length === 4 && employee.reviewRating < 2 ) {
       bonus += 5;
     }
-    else if (employee.reviewRating === 3 && employee.employeeNumber.length === 4 ) {
-      bonus += 9;
+    else if (employee.reviewRating === 3 ) {
+      bonus += 4;
     }
-    else if (employee.reviewRating === 4 && employee.employeeNumber.length === 4 ) {
-      bonus += 11;
+    else if (employee.reviewRating === 4 ) {
+      bonus += 6;
     }
-    else if (employee.reviewRating === 5 && employee.employeeNumber.length === 4 ) {
-      bonus += 13;
+    else if (employee.reviewRating === 5 ) {
+      bonus += 10;
+   
     }
   }
 } return 
