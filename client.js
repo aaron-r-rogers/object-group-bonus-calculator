@@ -39,46 +39,58 @@ const employees = [
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
 
-function newEmployeeObject (employeeArray) {
-  let objResult = [];
-  for (employee of company) {
-
+for (let employeeObj of company) {
+function newemployeeObject (employeeObj) {
+  let objResult = {};
+  let name = employee.name;
+  let bonusPercent = bonusCalc(reviewRating);
+  let totalBonus = Number(employees.annualSalary) * bonusPercent;
+  let totalComp = totalBonus + Number(employees.annualSalary);
   }
   console.log (objResult);
 }
 
-console.log( employees );
 
-function bonusCalc (employeeArray) {
-  let bonus = 0
-  for (employee of company) {
-    if (employee.reviewRating < 2) {
+//console.log( employeeObject );
+
+function bonusCalc (employeeObject) {
+  let bonus = 0;
+  let numLength = employeeObject.employeeNumber;
+  {if (numLength.length === 4 && employeeObject.reviewRating <= 2 && Number(employeeObject.annualSalary) > 65000) {
+      bonus += 0.06;
+    }
+    else if (employeeObject.employeeNumber.length === 4 && employeeObject.reviewRating <= 2 ) {
+      bonus += 0.05;
+    }
+    else if (employeeObject.reviewRating <= 2) {
       bonus += 0;
     }
-    else if ((Number(employee.annualSalary) > 65000) {
-      bonus += 1;
-    })
-    else if (employee.employeeNumber.length === 4 && employee.reviewRating === 3) {
-      bonus += 4;
+    else if (Number(employeeObject.annualSalary) > 65000) {
+      bonus += 0.01;
     }
-    else if (employee.employeeNumber.length === 4 && employee.reviewRating === 4) {
-      bonus += 6;
+    else if (employeeObject.employeeNumber.length === 4 && employeeObject.reviewRating === 3) {
+      bonus += 0.09;
     }
-    else if (employee.employeeNumber.length === 4 && employee.reviewRating === 5) {
-      bonus += 10;
+    else if (employeeObject.employeeNumber.length === 4 && employeeObject.reviewRating === 4) {
+      bonus += 0.10;
     }
-    else if (employee.employeeNumber.length === 4 && employee.reviewRating < 2 ) {
-      bonus += 5;
+    else if (employeeObject.employeeNumber.length === 4 && employeeObject.reviewRating === 5) {
+      bonus += 0.13;
     }
-    else if (employee.reviewRating === 3 ) {
-      bonus += 4;
+    else if (employeeObject.reviewRating === 3 ) {
+      bonus += 0.04;
     }
-    else if (employee.reviewRating === 4 ) {
-      bonus += 6;
+    else if (employeeObject.reviewRating === 4 ) {
+      bonus += 0.06;
     }
-    else if (employee.reviewRating === 5 ) {
-      bonus += 10;
-   
+    else if (employeeObject.reviewRating === 5 ) {
+      bonus += 0.10;
     }
-  }
-} return 
+  } return `${employeeObject.name} ${bonus}`
+} 
+
+console.log(bonusCalc(employees[0]));
+console.log(bonusCalc(employees[1]));
+console.log(bonusCalc(employees[2]));
+console.log(bonusCalc(employees[3]));
+console.log(bonusCalc(employees[4]));
