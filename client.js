@@ -39,4 +39,42 @@ const employees = [
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
 
+function newEmployeeObject (employeeArray) {
+  let objResult = [];
+  for (employee of company) {
+
+  }
+  console.log (objResult);
+}
+
 console.log( employees );
+
+function bonusCalc (employeeArray) {
+  let bonus = 0
+  for (employee of company) {
+    if (employee.reviewRating < 2) {
+      bonus += 0;
+    }
+    else if (employee.reviewRating === 3) {
+      bonus += 4;
+    }
+    else if (employee.reviewRating === 4) {
+      bonus += 6;
+    }
+    else if (employee.reviewRating === 5) {
+      bonus += 10;
+    }
+    else if (employee.reviewRating < 2 && employee.employeeNumber.length === 4 ) {
+      bonus += 5;
+    }
+    else if (employee.reviewRating === 3 && employee.employeeNumber.length === 4 ) {
+      bonus += 9;
+    }
+    else if (employee.reviewRating === 4 && employee.employeeNumber.length === 4 ) {
+      bonus += 11;
+    }
+    else if (employee.reviewRating === 5 && employee.employeeNumber.length === 4 ) {
+      bonus += 13;
+    }
+  }
+} return 
