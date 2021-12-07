@@ -47,8 +47,30 @@ function newemployeeObject (employeeObj) {
   let totalBonus = Number(employees.annualSalary) * bonusPercent;
   let totalComp = totalBonus + Number(employees.annualSalary);
   }
+  objResult = MakeEmpObj(name, bonusPercent, totalBonus, totalComp) {
   console.log (objResult);
 }
+
+function MakeEmpObj(name, bonusPercent, totalBonus, totalComp) {
+  this.name = name,
+  this.bonusPercent = bonusPercent,
+  this.totalBonus = totalBonus,
+  this.totalComp = totalComp
+};
+
+/*
+for (let employee of employeeList) {
+  let bonusInfo = bonusCalc(employee);
+  console.log(`bonus info for ${employee.name}:`, bonusInfo)
+}
+return {
+	name: employee.name,
+	bonusPercent = bonusCalc(employee),
+	totalBonus = Number(employees.annualSalary) * bonusPercent,
+	totalComp = totalBonus + Number(employees.annualSalary)
+}
+}
+*/
 
 
 //console.log( employeeObject );
